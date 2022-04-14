@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" src="./src/styles.css"
+  </head>
+
+  <body>
+    <h1>A Custom video player</h1>
+    <main id="player">
+      
+      <video
+        class="player-video viewer"
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+      ></video>
+
+      <div class="player-controls">
+
+        <div class="progress">
+          <div class="progress-filled"></div>
+        </div>
+
+        <button class="player-btn toggle" title="Toggle Play">►</button>
+
+        <div  class="ranges" >
+          <div class="input-area" >
+          <label for="volume">volume</label>
+        <input
+          type="range"
+          name="volume"
+          class="player-slider"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+        />
+          </div>
+          <div class="input-area"  >
+        <label for="volume">speed</label>
+        <input
+          type="range"
+          name="playbackRate"
+          class="player-slider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+        </div>
+        </div>
+
+        <div  class="ranges" >
+        <button class="player-btn" data-skip="-10">
+          -10s
+        </button>
+        <button class="player-btn" data-skip="10">+10s</button>
+        </div>
+    
+    </main>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
